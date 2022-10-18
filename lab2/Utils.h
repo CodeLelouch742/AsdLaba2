@@ -29,25 +29,25 @@ struct Snail
 
     void lookingConfusion()//O(n*log(n))
     {
-        mergeSort(paths, 0, lenght-1);
+        mergerSort(paths, 0, lenght-1);
             if (paths[0] == paths[1])
                 this->confusion = true;
     }
 
-    void mergeSort(float* allPaths, int first, int last)//O(nlog(n))
+    void mergerSort(float* allPaths, int first, int last)//O(nlog(n))
     {
 
         int center = first + (last - first) / 2;
         if (first < last)
         {
-            mergeSort(allPaths, first, center);
-            mergeSort(allPaths, center + 1, last);
+            mergerSort(allPaths, first, center);
+            mergerSort(allPaths, center + 1, last);
 
-            merge(allPaths, first, center, last);//O(n)
+            merger(allPaths, first, center, last);//O(n)
         }
     }
 
-    void merge(float* partPaths, int first, int center, int last)//O(n)
+    void merger(float* partPaths, int first, int center, int last)//O(n)
     {
         int i = 0, j = 0, k = first;
         int number1 = center - first + 1;
