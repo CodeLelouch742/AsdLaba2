@@ -63,7 +63,7 @@ int snailsConfusionOutput(){
     {
         if (snails[i].confusion)
         {
-            cout << "Улитка " << i << " в замешательстве\n";
+            cout << "Улитка " << i+1 << " в замешательстве\n";
             snailsNumber++;
         }
     }
@@ -90,7 +90,7 @@ int snailsInput(){
     {
         check = 1;
         while(check){
-            cout <<"Улитка "<< i << ": " << endl << "X: ";
+            cout <<"Улитка "<< i+1 << ": " << endl << "X: ";
             cin >> snails[i].x;
             cout << "Y: ";
             cin >> snails[i].y;
